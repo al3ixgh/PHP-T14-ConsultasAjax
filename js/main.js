@@ -1,12 +1,11 @@
-addEventListener('load',inicializarEventos,false);
-
-function inicializarEventos(){
-    getAll();
-}
+addEventListener('load',getAll,false);
+ var random=parseInt(Math.random() * (671 - 1) + 1);
+ console.log(random);
 
 function getAll(){
+    
     $.ajax({
-        url:"https://rickandmortyapi.com/api/character/326",
+        url:"https://rickandmortyapi.com/api/character/"+random,
         method: 'GET',
         dataType: 'Json',
         headers: {
@@ -23,8 +22,9 @@ function getAll(){
             console.log(error);
         }
     })
+    random=parseInt(Math.random() * (671 - 1) + 1);
     $.ajax({
-        url:"https://rickandmortyapi.com/api/character/316",
+        url:"https://rickandmortyapi.com/api/character/"+random,
         method: 'GET',
         dataType: 'Json',
         headers: {
@@ -32,17 +32,17 @@ function getAll(){
         },
         contentType: 'application/x-www-form-urlencoded',
         success: function(data){
-            console.log(JSON.stringify(data));
+            console.log(data);
             document.getElementById("img2").src=data.image;
             $("#title2").html(data.name);
-
         },
         error: function (error){
             console.log(error);
         }
     })
+    random=parseInt(Math.random() * (671 - 1) + 1);
     $.ajax({
-        url:"https://rickandmortyapi.com/api/character/306",
+        url:"https://rickandmortyapi.com/api/character/"+random,
         method: 'GET',
         dataType: 'Json',
         headers: {
@@ -59,8 +59,9 @@ function getAll(){
             console.log(error);
         }
     })
+    random=parseInt(Math.random() * (671 - 1) + 1);
     $.ajax({
-        url:"https://rickandmortyapi.com/api/character/206",
+        url:"https://rickandmortyapi.com/api/character/"+random,
         method: 'GET',
         dataType: 'Json',
         headers: {
@@ -77,8 +78,9 @@ function getAll(){
             console.log(error);
         }
     })
+    random=parseInt(Math.random() * (671 - 1) + 1);
     $.ajax({
-        url:"https://rickandmortyapi.com/api/character/256",
+        url:"https://rickandmortyapi.com/api/character/"+random,
         method: 'GET',
         dataType: 'Json',
         headers: {
@@ -95,8 +97,9 @@ function getAll(){
             console.log(error);
         }
     })
+    random=parseInt(Math.random() * (671 - 1) + 1);
     $.ajax({
-        url:"https://rickandmortyapi.com/api/character/276",
+        url:"https://rickandmortyapi.com/api/character/"+random,
         method: 'GET',
         dataType: 'Json',
         headers: {
