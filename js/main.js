@@ -16,8 +16,11 @@ function getAll(){
 
         success: function(data){
             console.log(JSON.stringify(data));
-            document.getElementById("img1").src=JSON.stringify(data.image);
-            document.getElementById("title1").innerHTML=JSON.stringify(data.name);
+            console.log(data.image);
+            document.getElementById("img1").src=data.image;
+            // document.getElementById("img1").attr('src',data.image);
+            document.getElementById("title1").innerHTML=data.name;
+
         },
         error: function (error){
             console.log(error);
